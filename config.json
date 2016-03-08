@@ -1,0 +1,14 @@
+{
+  "name":"Mungo Exporter",
+  "version":1,
+  "key":"60cc7830-e4d1-11e5-a2d0-305a3a0dcdc5",
+  "interface":[
+  {
+      "type":"checkbox",
+      "label":"Export Images and Files?",
+      "items":[
+        "Please include images"           
+      ],
+      "default":"Please include images"
+    }]
+}
