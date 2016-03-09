@@ -440,9 +440,9 @@ relntypecursor = importCon.cursor()
 relncursor = importCon.cursor()
 for relntypeid, relntypename in relntypecursor.execute(relntypequery): 
     relncursor.execute(relnquery, [relntypename])
-    exportcon.execute("CREATE TABLE %s (parentuuid TEXT, childuuid TEXT, participatesverb TEXT" % (relntypename))
+    exportCon.execute("CREATE TABLE %s (parentuuid TEXT, childuuid TEXT, participatesverb TEXT" % (relntypename))
     for i in relncursor:
-        exportcon.execute("INSERT INTO %s VALUES(?,?,?)" % (relntypename), i)
+        exportCon.execute("INSERT INTO %s VALUES(?,?,?)" % (relntypename), i)
 
     #files.append("Relationship-%s.csv" % (clean(relntypename)))
     #csv_writer = UnicodeWriter(open(exportDir+"Relationship-%s.csv" % (clean(relntypename)), "wb+"))
