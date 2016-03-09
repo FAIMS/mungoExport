@@ -428,8 +428,8 @@ for at in importCon.execute("select aenttypename from aenttype"):
 relntypequery = '''select distinct relntypeid, relntypename from relntype join latestnondeletedrelationship using (relntypeid);'''
 
 relnquery = '''select distinct parent.uuid as parentuuid, child.uuid as childuuid, parent.participatesverb
-                 from original.latestnondeletedaentreln parent 
-                 join original.latestnondeletedaentreln child using (relationshipid)
+                 from latestnondeletedaentreln parent 
+                 join latestnondeletedaentreln child using (relationshipid)
                  join relationship using (relationshipid)
                  join relntype using (relntypeid)
                 where parent.uuid != child.uuid
