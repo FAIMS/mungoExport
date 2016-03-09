@@ -401,7 +401,7 @@ for row in importCon.execute("select aenttypename, geometrytype(geometryn(geospa
     files.append("%s.shx" % (clean(row[0])))
     # print cmd
     subprocess.call(cmd, cwd=exportDir)
-
+'''
 for at in importCon.execute("select aenttypename from aenttype"):
     aenttypename = "%s" % (clean(at[0]))
 
@@ -420,20 +420,35 @@ for at in importCon.execute("select aenttypename from aenttype"):
     csv_writer.writerows(cursor)
 
     #spatialite_tool -e -shp surveyUnitTransectBuffer -d db.sqlite3 -t surveyUnitWithTransectBuffer -c utf-8 -g surveyBuffer --type polygon
+'''
+
+
+
 
 relntypequery = '''select distinct relntypeid, relntypename from relntype join latestnondeletedrelationship using (relntypeid);'''
 
-relnquery = '''select parent.uuid as fromuuid, child.uuid as touuid, fname || ' ' || lname as username, parent.aentrelntimestamp, parent.participatesverb from (select * from latestnondeletedaentreln join relationship using (relationshipid)  where relationshipid in (select relationshipid from relationship join relntype using (relntypeid) where relntypename = ?)) parent join (latestnondeletedaentreln join relationship using (relationshipid)) child on (parent.relationshipid = child.relationshipid and parent.uuid != child.uuid)  join user using (userid)'''
+relnquery = '''select distinct parent.uuid as parentuuid, child.uuid as childuuid, parent.participatesverb
+                 from original.latestnondeletedaentreln parent 
+                 join original.latestnondeletedaentreln child using (relationshipid)
+                 join relationship using (relationshipid)
+                 join relntype using (relntypeid)
+                where parent.uuid != child.uuid
+                  and relntypename = ?'''
 
 
 relntypecursor = importCon.cursor()
 relncursor = importCon.cursor()
 for relntypeid, relntypename in relntypecursor.execute(relntypequery): 
     relncursor.execute(relnquery, [relntypename])
-    files.append("Relationship-%s.csv" % (clean(relntypename)))
-    csv_writer = UnicodeWriter(open(exportDir+"Relationship-%s.csv" % (clean(relntypename)), "wb+"))
-    csv_writer.writerow([i[0] for i in relncursor.description]) # write headers
-    csv_writer.writerows(relncursor)
+    exportcon.execute("CREATE TABLE %s (parentuuid TEXT, childuuid TEXT, participatesverb TEXT" % (relntypename))
+    for i in relncursor:
+        exportcon.execute("INSERT INTO %s VALUES(?,?,?)" % (relntypename), i)
+
+    #files.append("Relationship-%s.csv" % (clean(relntypename)))
+    #csv_writer = UnicodeWriter(open(exportDir+"Relationship-%s.csv" % (clean(relntypename)), "wb+"))
+    #csv_writer.writerow([i[0] for i in relncursor.description]) # write headers
+    #csv_writer.writerows(relncursor)
+
 
 
 tarf = tarfile.open("%s/%s-export.tar.bz2" % (finalExportDir,moduleName), 'w:bz2')

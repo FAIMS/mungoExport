@@ -14,9 +14,9 @@ drop table if exists bonecsv;
 
 
 .out stone.csv
-	select 	replace(replace(stoneartefactclusters.StoneGridSquare,'Grid Square ',''),' - ','') as GridSquare,
+	select 	replace(StoneIDNumber,'Stone ','') as IDNumber,
+			replace(replace(stoneartefactclusters.StoneGridSquare,'Grid Square ',''),' - ','') as GridSquare,
 			'Stone' as SiteType,
-			replace(StoneIDNumber,'Stone ','') as IDNumber,
 			StoneInSituStoneArtefacts as InSituStoneArtefacts,
 			StoneInSituChippedStoneArtefacts as InSituChippedStoneArtefacts,
 			StoneInSituRetouchedArtefacts as InSituRetouchedArtefacts,
@@ -82,9 +82,9 @@ group by stoneartefactclusters.uuid
 order by createdAt, cast(IDNumber as Numeric);
 
 .out isolated.csv
-select 	replace(replace(isolated.IsolatedGridSquare,'Grid Square ',''),' - ','') as GridSquare,
+select 	replace(IsolatedIDNumber,'Isolated ','') as IDNumber,
+		replace(replace(isolated.IsolatedGridSquare,'Grid Square ',''),' - ','') as GridSquare,
 		'Isolated' as SiteType,
-		replace(IsolatedIDNumber,'Isolated ','') as IDNumber,
 		IsolatedInSituorSurface as InSituorSurface,
 		IsolatedOccurrenceType as OccurrenceType,
 		IsolatedStoneRawMaterialType as StoneRawMaterialType,
@@ -105,9 +105,9 @@ from isolated
 
 .out shell.csv
 
-select	replace(replace(shell.shellGridSquare,'Grid Square ',''),' - ','') as GridSquare,
+select	replace(shellIDNumber,'Shell ','') as IDNumber,
+		replace(replace(shell.shellGridSquare,'Grid Square ',''),' - ','') as GridSquare,
 		'Shell' as SiteType,
-		replace(shellIDNumber,'Shell ','') as IDNumber,
 		ShellShellType as ShellType,
 		ShellContinuity as Continuity,
 		ShellPresenceofcharcoal as Presenceofcharcoal,
@@ -155,9 +155,9 @@ order by createdAt, cast(IDNumber as Numeric);
 
 .out hearth.csv
 
-select 	replace(replace(hearth.hearthGridSquare,'Grid Square ',''),' - ','') as GridSquare,
-		'Hearth' as SiteType,
-		replace(hearthIDNumber,'Hearth ','') as IDNumber,
+select 	replace(hearthIDNumber,'Hearth ','') as IDNumber,
+		replace(replace(hearth.hearthGridSquare,'Grid Square ',''),' - ','') as GridSquare,
+		'Hearth' as SiteType,		
 		HearthHearthType as HearthType,
 		HearthBriefdescription as Briefdescription,
 		HearthCharcoal as Charcoal,
@@ -202,9 +202,9 @@ group by hearth.uuid
 order by createdAt, cast(IDNumber as Numeric);
 .out bone.csv
 
-select	replace(replace(bone.oldboneGridSquare,'Grid Square ',''),' - ','') as GridSquare,
+select	replace(oldboneIDNumber,'Bone ','') as IDNumber,
+		replace(replace(bone.oldboneGridSquare,'Grid Square ',''),' - ','') as GridSquare,
 		'Bone' as SiteType,
-		replace(oldboneIDNumber,'Bone ','') as IDNumber,
 		OldBoneClusterType as ClusterType,
 		OldBoneProportionofmaterialthatremainsinsitu as Proportionofmaterialthatremainsinsitu,
 		OldBoneBodyPartsIdentifed as BodyPartsIdentifed,
