@@ -126,6 +126,7 @@ class UnicodeWriter:
         self.stream.write(data.replace('"""','"').replace('"None"',''))
         # empty queue
         self.queue.truncate(0)
+        self.stream.flush()
 
     def writerows(self, rows):
         for row in rows:
