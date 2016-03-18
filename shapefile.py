@@ -492,7 +492,7 @@ stoneQuery = '''
                 StoneSurfaceGroundStoneStatus as 'Surf GS Status',
                 StoneSurfaceGroundStoneRawMaterial as 'Surf GS Raw Mat',
                 StoneSurfaceSurfaceModification as 'Surd Mod',
-                coalesce(StoneInSituPotentialRefits,'') || coalesce(StoneSurfacePotentialRefits,'') as 'Insit / Surf Pot Refit',
+                coalesce(StoneInSituPotentialRefits,'') || coalesce(StoneSurfacePotentialRefits,'') as 'Pot Refit',
                 group_concat(StoneAssociatedInsitu.StoneInSitu,' | ') as 'Insitu Assoc',
                 group_concat(StoneAssociatedSurface.StoneSurface,' | ') as 'Surf Assoc',
                 group_concat(StoneAssociatedInsitu.StoneHearth,' | ') as 'Insit Hearth',
