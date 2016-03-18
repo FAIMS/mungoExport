@@ -715,6 +715,7 @@ def outputTable(tablename, query):
             csv_writer.writerow([i[0] for i in tableCursor.description]) # write headers
             csv_writer.writerows(tableCursor)
     except:
+        print "Unexpected error:", sys.exc_info()[0]
         print tablename, query
 
 
