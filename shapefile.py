@@ -578,7 +578,6 @@ shellQuery= '''
             group_concat(ShellAssocAssociatedretouchedartefacts,' | ') as 'Ret',
             group_concat(ShellAssocChippedStoneRawMaterial,' | ') as 'CS Raw Mat',
             group_concat(ShellAssocAssociatedunmodifiedstone,' | ') as 'Unmod',
-            group_concat(ShellAssocUnmodifiedStoneTypes,' | ') as 'Unmod Stone Types',
             group_concat(ShellAssocUnmodifiedRawMaterial,' | ') as 'Unmod Raw Mat',
             group_concat(ShellAssocGroundstonetypespresent,' | ') as 'GS',
             group_concat(ShellAssocGroundstonestatus,' | ') as 'GS Status',
