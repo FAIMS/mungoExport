@@ -533,8 +533,8 @@ stoneQuery = '''
 
 
 isolatedQuery = '''
-    select  replace(IsolatedIDNumber,'Isolated ','') as 'Sq',
-            replace(replace(isolated.IsolatedGridSquare,'Grid Square ',''),' - ','') as 'ID',
+    select  replace(replace(isolated.IsolatedGridSquare,'Grid Square ',''),' - ','') as 'Sq',
+            replace(IsolatedIDNumber,'Isolated ','') as 'ID',
             'Isolated' as 'Site',
             IsolatedInSituorSurface as 'Status',
             IsolatedOccurrenceType as 'Type',
@@ -556,8 +556,8 @@ isolatedQuery = '''
 
 shellQuery= '''
 
-    select  replace(shellIDNumber,'Shell ','') as 'Sq',
-            replace(replace(shell.shellGridSquare,'Grid Square ',''),' - ','') as 'ID',
+    select  replace(replace(shell.shellGridSquare,'Grid Square ',''),' - ','') as 'Sq',
+            replace(shellIDNumber,'Shell ','') as 'ID',
             'Shell' as 'Site',
             ShellShellType as 'Feature',
             ShellContinuity as 'Continuity',
@@ -601,8 +601,8 @@ shellQuery= '''
 
 hearthQuery = '''
 
-    select  replace(hearthIDNumber,'Hearth ','') as 'Sq',
-            replace(replace(hearth.hearthGridSquare,'Grid Square ',''),' - ','') as 'ID',
+    select  replace(replace(hearth.hearthGridSquare,'Grid Square ',''),' - ','') as 'Sq',
+            replace(hearthIDNumber,'Hearth ','') as 'ID',
             'Hearth' as 'Site',
             HearthHearthType as 'Feature',
             HearthBriefdescription as 'Desc',
@@ -643,8 +643,8 @@ hearthQuery = '''
     order by cast(ID as Numeric);
 '''
 boneQuery = '''
-select  replace(oldboneIDNumber,'Bone ','') as 'ID',
-            replace(replace(bone.oldboneGridSquare,'Grid Square ',''),' - ','') as 'Sq',
+select  replace(replace(bone.oldboneGridSquare,'Grid Square ',''),' - ','') as 'Sq',
+            replace(oldboneIDNumber,'Bone ','') as 'ID',
             'Bone' as 'Site',
             OldBoneClusterType as 'Feature',
             OldBoneProportionofmaterialthatremainsinsitu as '% insit',
