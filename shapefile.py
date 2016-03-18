@@ -526,7 +526,7 @@ stoneQuery = '''
       left outer join StoneAssociatedInsitu on (StoneAssociatedInsitu.uuid = StoneAndAssociatedInsituMaterials.childuuid)
       left outer join StoneAssociatedSurface on (stoneassociatedsurface.uuid = StoneAndAssociatedSurfaceMaterials.childuuid)
     group by stoneartefactclusters.uuid
-    order by cast(IDNumber as Numeric);
+    order by cast(ID as Numeric);
 '''
 
 
@@ -551,7 +551,7 @@ isolatedQuery = '''
             datetime(replace(isolated.createdAtGMT,'GMT',''),'localtime') as 'createdAt',
             isolated.createdBy as 'createdBy'
     from isolated
-      order by cast(IDNumber as Numeric);
+      order by cast(ID as Numeric);
 '''
 
 shellQuery= '''
@@ -597,7 +597,7 @@ shellQuery= '''
     left outer join ShellAndAssociatedMaterials on (shell.uuid = ShellAndAssociatedMaterials.parentuuid)
     left outer join ShellAssociatedMaterials on (ShellAssociatedMaterials.uuid = ShellAndAssociatedMaterials.childuuid)
     group by shell.uuid
-    order by cast(IDNumber as Numeric);
+    order by cast(ID as Numeric);
 '''
 
 hearthQuery = '''
@@ -641,7 +641,7 @@ hearthQuery = '''
       left outer join HearthAndAssociatedMaterials on (hearth.uuid = HearthAndAssociatedMaterials.parentuuid)
       left outer join HearthAssociatedMaterials on (HearthAssociatedMaterials.uuid = HearthAndAssociatedMaterials.childuuid)
     group by hearth.uuid
-    order by cast(IDNumber as Numeric);
+    order by cast(ID as Numeric);
 '''
 boneQuery = '''
 select  replace(oldboneIDNumber,'Bone ','') as 'ID',
@@ -700,7 +700,7 @@ select  replace(oldboneIDNumber,'Bone ','') as 'ID',
       left outer join BoneAssociatedInsituMaterials on (BoneAssociatedInsituMaterials.uuid = BoneAndAssociatedInsituMaterials.childuuid)
       left outer join BoneAssociatedSurfaceMaterials on (BoneAssociatedSurfaceMaterials.uuid = BoneAndAssociatedSurfaceMaterials.childuuid)
     group by bone.uuid
-    order by cast(IDNumber as Numeric);
+    order by cast(ID as Numeric);
 '''
 
 
