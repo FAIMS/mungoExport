@@ -1,1 +1,1 @@
-{"interface": [{"default": "Please include images", "items": ["Please include images"], "type": "checkbox", "label": "Export Images and Files?"}], "version": 16, "name": "Mungo Exporter", "key": "60cc7830-e4d1-11e5-a2d0-305a3a0dcdc5"}
+{"interface": [{"default": "Please include images", "items": ["Please include images"], "type": "checkbox", "label": "Export Images and Files?"}], "version": 17, "name": "Mungo Exporter", "key": "60cc7830-e4d1-11e5-a2d0-305a3a0dcdc5"}

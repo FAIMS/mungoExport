@@ -441,7 +441,7 @@ for at in importCon.execute("select aenttypename from aenttype"):
 
 
 
-relntypequery = '''select distinct relntypeid, relntypename from relntype join latestnondeletedrelationship using (relntypeid);'''
+relntypequery = '''select distinct relntypeid, relntypename from relntype left outer join latestnondeletedrelationship using (relntypeid);'''
 
 relnquery = '''select distinct parent.uuid as parentuuid, child.uuid as childuuid, parent.participatesverb
                  from latestnondeletedaentreln parent 
