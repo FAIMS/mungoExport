@@ -241,19 +241,6 @@ for line in f:
 f.close()
 
 
-importCon.execute('''
-update aentvalue set measure = vocabid   
- where vocabid not in (select vocabid from vocabulary);
-''')
-
-importCon.execute('''
-update aentvalue set vocabid = null
- where vocabid not in (select vocabid from vocabulary);    
-                  ''')
-
-importCon.commit()
-
-
 
 
 for aenttypeid, aenttypename in importCon.execute("select aenttypeid, aenttypename from aenttype"): 
