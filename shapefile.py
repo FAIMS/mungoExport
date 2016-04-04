@@ -400,7 +400,7 @@ if images:
     #print "    ",realExportList
     
     for aenttypename in realExportList:
-        #print aenttypename, realExportList[aenttypename]
+        print aenttypename, realExportList[aenttypename], exportAttributes[aenttypename]
         for uuid in realExportList[aenttypename]:
             exportCon.execute("update %s set %s = ? where uuid = ?" % (aenttypename, exportAttributes[aenttypename]), (', '.join(realExportList[aenttypename][uuid]), uuid))
     exportCon.commit()
