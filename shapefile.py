@@ -399,8 +399,9 @@ if images:
     
     #print "    ",realExportList
     
-    pprint(var(exportPhotos))
-    pprint(var(realExportList))
+   
+    pprint.pprint(exportAttributes) 
+    pprint.pprint(realExportList) 
 
 
     for aenttypename in realExportList:
@@ -547,11 +548,11 @@ isolatedQuery = '''
             IsolatedModificationtoStoneMaterial as 'Mod Inorg',
             IsolatedTopographicSetting as 'Topo',
             IsolatedSedimentType as 'Sed',
-            IsolatedVulnerabilitytoErosion as 'Strat',
-            IsolatedPalaeotopographicSetting as 'Vulnerable',
-            IsolatedNotes as 'Palaeotopo',
+            IsolatedVulnerabilitytoErosion as 'Vulnerable',
+            IsolatedPalaeotopographicSetting as 'Palaeotopo',
+            IsolatedNotes as 'Notes',
             IsolatedPhotos as 'Photos',
-            IsolatedStratigraphicUnit as 'Notes',
+            IsolatedStratigraphicUnit as 'Strat',
             datetime(replace(isolated.createdAtGMT,'GMT',''),'localtime') as 'createdAt',
             isolated.createdBy as 'createdBy'
     from isolated

@@ -7,7 +7,7 @@
  
 # read json interface input file into string
 
-echo $0 > /tmp/exportRun
+echo "$0 $1 $2 $3 $4" > /tmp/exportRun
 
 json=`python -mjson.tool $2`
  
