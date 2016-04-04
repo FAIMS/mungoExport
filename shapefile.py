@@ -242,16 +242,16 @@ f.close()
 
 
 importCon.execute('''
-begin;
-
 update aentvalue set measure = vocabid   
  where vocabid not in (select vocabid from vocabulary);
+''')
 
+importCon.execute('''
 update aentvalue set vocabid = null
- where vocabid not in (select vocabid from vocabulary);
-
-commit;                  
+ where vocabid not in (select vocabid from vocabulary);    
                   ''')
+
+importCon.commit()
 
 
 
