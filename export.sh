@@ -6,6 +6,9 @@
 # $4 file to write markdown text into e.g. /tmp/mark_down.txt => h3. Traditional html title
  
 # read json interface input file into string
+
+echo $0 > /tmp/exportRun
+
 json=`python -mjson.tool $2`
  
 # export database to csv using json inputs and pass output into export file inside download directory
