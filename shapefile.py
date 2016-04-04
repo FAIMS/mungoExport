@@ -399,8 +399,8 @@ if images:
     
     #print "    ",realExportList
     
-    pprint(exportPhotos)
-    pprint(realExportList)
+    pprint(var(exportPhotos))
+    pprint(var(realExportList))
 
 
     for aenttypename in realExportList:
