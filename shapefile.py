@@ -318,7 +318,7 @@ if images:
     realExportList = {}
 
     print "* File list exported:"
-    for filename in importCon.execute("select uuid, measure, freetext, certainty, attributename, aenttypename from latestnondeletedaentvalue join attributekey using (attributeid) join latestnondeletedarchent using (uuid) join aenttype using (aenttypeid) where attributeisfile is not null and measure is not null"):
+    for filename in importCon.execute("select uuid, measure, freetext, certainty, attributename, aenttypename from latestnondeletedaentvalue join attributekey using (attributeid) join latestnondeletedarchent using (uuid) join aenttype using (aenttypeid) join idealaent using (aenttypeid, attributeid) where attributeisfile is not null and measure is not null"):
         try:        
             oldPath = filename[1].split("/")
             oldFilename = oldPath[2]
@@ -399,10 +399,6 @@ if images:
     
     #print "    ",realExportList
     
-   
-    pprint.pprint(exportAttributes) 
-    pprint.pprint(realExportList) 
-
 
     for aenttypename in realExportList:
     
