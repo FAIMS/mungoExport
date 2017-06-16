@@ -38,7 +38,7 @@ import errno
 import imghdr
 import bz2
 import tarfile
-import lsb
+import lsb_release
 
 from collections import defaultdict
 import zipfile
