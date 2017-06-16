@@ -323,7 +323,14 @@ if images:
     realExportList = {}
 
     print "* File list exported:"
-    for filename in importCon.execute("select uuid, measure, freetext, certainty, attributename, aenttypename from latestnondeletedaentvalue join attributekey using (attributeid) join latestnondeletedarchent using (uuid) join aenttype using (aenttypeid) join idealaent using (aenttypeid, attributeid) where attributeisfile is not null and measure is not null"):
+    for filename in importCon.execute("""select uuid, measure, freetext, certainty, attributename, aenttypename 
+                                         from latestnondeletedaentvalue 
+                                         join attributekey using (attributeid) 
+                                         join latestnondeletedarchent using (uuid) 
+                                         join aenttype using (aenttypeid) 
+                                         join idealaent using (aenttypeid, attributeid) 
+                                         where attributeisfile is not null and measure is not null 
+                                         order by aentvaluetimestamp"""):
         try:        
             oldPath = filename[1].split("/")
             oldFilename = oldPath[2]
@@ -478,6 +485,7 @@ stoneQuery = '''
     select  replace(replace(stoneartefactclusters.StoneGridSquare,'Grid Square ',''),' - ','') as 'Sq',
                 replace(StoneIDNumber,'Stone ','') as 'ID',
                 'Stone' as 'Site',
+                StoneClusterType as 'Feature Type',
                 StoneInSituStoneArtefacts as 'Insit Stone',
                 StoneInSituChippedStoneArtefacts as 'Insit CS',
                 StoneInSituRetouchedArtefacts as 'Insit Ret',
@@ -497,7 +505,7 @@ stoneQuery = '''
                 StoneSurfaceGroundStoneTypes as 'Surf GS',
                 StoneSurfaceGroundStoneStatus as 'Surf GS Status',
                 StoneSurfaceGroundStoneRawMaterial as 'Surf GS Raw Mat',
-                StoneSurfaceSurfaceModification as 'Surd Mod',
+                StoneSurfaceSurfaceModification as 'Surf Mod',
                 coalesce(StoneInSituPotentialRefits,'') || coalesce(StoneSurfacePotentialRefits,'') as 'Pot Refit',
                 group_concat(StoneAssociatedInsitu.StoneInSitu,' | ') as 'Insitu Assoc',
                 group_concat(StoneAssociatedSurface.StoneSurface,' | ') as 'Surf Assoc',
@@ -551,9 +559,9 @@ isolatedQuery = '''
             IsolatedSedimentType as 'Sed',
             IsolatedVulnerabilitytoErosion as 'Vulnerable',
             IsolatedPalaeotopographicSetting as 'Palaeotopo',
-            IsolatedNotes as 'Notes',
-            IsolatedPhotos as 'Photos',
             IsolatedStratigraphicUnit as 'Strat',
+            IsolatedPhotos as 'Photos',
+            IsolatedNotes as 'Notes',
             datetime(replace(isolated.createdAtGMT,'GMT',''),'localtime') as 'createdAt',
             isolated.createdBy as 'createdBy'
     from isolated
