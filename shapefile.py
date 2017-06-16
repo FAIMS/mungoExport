@@ -330,7 +330,7 @@ if images:
                                          join aenttype using (aenttypeid) 
                                          join idealaent using (aenttypeid, attributeid) 
                                          where attributeisfile is not null and measure is not null 
-                                         order by aentvaluetimestamp"""):
+                                         order by valuetimestamp"""):
         try:        
             oldPath = filename[1].split("/")
             oldFilename = oldPath[2]
