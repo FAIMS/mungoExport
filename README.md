@@ -19,10 +19,10 @@ This module is licensed under an international Creative Commons Attribution 4.0 
 
 ## Access:
 This exporter can be downloaded directly from this repository and used on FAIMS **v2.5** server 
-* Clone the repository
-* Set the fetch url to the https url for the repository in .git/config
-* Create a tarball (tar.gz) of the repository directory
-* Upload the tarball to the server through the plugins interface 
+1. Clone the repository
+1. Set the fetch url to the https url for the repository in .git/config
+1. Create a tarball (tar.gz) of the repository directory
+1. Upload the tarball to the server through the plugins interface (for details, see below)
 
 ## This exporter contains the following features:
 * Simplified attributes, without Annotation and Certainty values
