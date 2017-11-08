@@ -2,7 +2,7 @@
 This exporter was created for the **Mungo Lake Archaeological Survey**, based at La Trobe University, Melbourne, Australia. The module has been documenting the history of human settlement at Lake Mungo, NSW, Australia. The project focuses on the history of human settlement, landscape evolution and past environmental change almost 45,000 years ago.
 
 ## Authorship
-This module was co-developed by Nicola Stern at La Trobe University and Adela Sobotkova and Brian Ballsun-Stanton at the FAIMS Project, Department of Ancient History, Macquarie University.
+This exporter was co-developed by Nicola Stern at La Trobe University and Adela Sobotkova and Brian Ballsun-Stanton at the FAIMS Project, Department of Ancient History, Macquarie University.
 
 ## Funding:
 Development of this module was funded by **ARC LE140100151** aimed to transform digital data collection in archaeology in 2014-2015; MQ Strategic Infrastructure Scheme 20110089, for FAIMS infrastructure development and support in 2016 and MQ Strategic Infrastructure Scheme 20110091, for FAIMS infrastructure development and support in 2017, and **Research Attraction and Acceleration Program (RAAP)** aimed to support innovation and investment in the New South Wales in 2016 and 2017.
