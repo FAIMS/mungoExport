@@ -20,12 +20,12 @@ This module is licensed under an international Creative Commons Attribution 4.0 
 ## Access:
 This exporter can be downloaded directly from this repository and used on FAIMS **v2.5** server 
 1. Clone the repository
-1. Create a tarball (tar.gz) of the repository directory
+1. Create a tarball (tar.gz) of the repository directory ([Do you know how-to-manage a tarball?](https://faimsproject.atlassian.net/wiki/spaces/MobileUser/pages/54984712/How+to+manage+a+tarball+archive))
 1. Upload the tarball to the server through the plugins interface (for details, see below)
 
 ## This exporter contains the following features:
 * Simplified attributes, without Annotation and Certainty values
-* Output Data format: CSV, shapefile, sqlite database, photos with metadata 
+* Output Data format: CSV, shapefile, sqlite database, photos with attached metadata 
 
 ## Exporter Use Recommendations:
 * Immediate field use with [Lake-Mungo Module](https://github.com/FAIMS/Lake-Mungo)
@@ -36,14 +36,14 @@ For more details about the **Lake Mungo Survey** please, contact n.stern@latrobe
 If you have any questions about the exporter or the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you within one business day.
 
 ## General How-to Info to Exporters 
-[*Based on the 'FAIMS User to Developer Documentation' and 'FAIMS Data UI and Logic Cook Book'](https://www.fedarch.org/support/#3)*
+[*Based on the 'FAIMS User to Developer Documentation' and 'FAIMS Data UI and Logic Cook Book'*](https://www.fedarch.org/support/#3)
 
 To get the data you have collected with the FAIMS Mobile app in a viewable, usable fashion, you'll need to find and download an exporter. An exporter allows you to export data from FAIMS server in many data formats (CSV, shapefile, sqlite database, json etc.). Each exporter has been customised for individual projects, but with none or minor changes it can be reused for other projects.
 
 **How do I make it work?**
 * On a PC, you can simply download / clone the file from GitHub. 
 
-* Create a tarball from the exporter using a program like 7zip; if you're using UNIX, enter something like `tar -czf shapefileExport.tar.gz shapefileExport` 
+* Create a [tarball](https://faimsproject.atlassian.net/wiki/spaces/MobileUser/pages/54984712/How+to+manage+a+tarball+archive) from the exporter using a program like 7zip; if you're using UNIX, enter something like `tar -czf shapefileExport.tar.gz shapefileExport` 
 
 * Now, if you navigate on the server to your module, you'll see a tab at the top labeled 'Plugin Management'. Click that and you'll be brought to a page with the handy feature, 'Upload Exporter'. Choose the tarball you've just created and hit 'Upload'. You now have an exporter permanently stored to your FAIMS server and may make use of it whenever you'd like.
 
