@@ -37,7 +37,7 @@ For more details about the **Lake Mungo Survey** please, contact n.stern@latrobe
 If you have any questions about the exporter or the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you within one business day.
 
 ## General How-to Info to Exporters 
-*[Based on FAIMS User to Developer Documentation](https://docs.google.com/document/d/1BQ_AZQQwEm2pxMyQ5wDLjOdEsO2ixmJaCwEyc9jsEOs/edit)*
+*[Based on the 'FAIMS User to Developer Documentation'](https://docs.google.com/document/d/1BQ_AZQQwEm2pxMyQ5wDLjOdEsO2ixmJaCwEyc9jsEOs/edit)*
 
 To get the data you have collected with the FAIMS Mobile app in a viewable, usable fashion, you'll need to find and download an exporter. An exporter allows you to export data from FAIMS server in many data formats (CSV, shapefile, sqlite database, json etc.). Each exporter has been customised for individual projects, but after none or minor changes can be reused for other projects.
 
