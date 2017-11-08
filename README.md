@@ -44,7 +44,7 @@ To get the data you have collected with the FAIMS Mobile app in a viewable, usab
 **How do I make it work?**
 * On a PC, you can simply download the file from GitHub. If you're using your UNIX virtual machine, you can do so by entering at the command prompt (denoted by \$. Don't copy the \$):
 
-* A command to use the program 'git' to make a copy of the remote code onto your computer `git clone https://github.com/FAIMS/shapefileExport/` ...with the name of whatever exporter you want, in this example shapefileExport, in the final position.
+* A command to use the program 'git' to make a copy of the remote code onto your computer `git clone https://github.com/FAIMS/shapefileExport/` ...with the name of whatever exporter you want, in this example we use shapefileExport exporting geodata (points, lines, polygons) in the form of shapefile.
 
 * Once you've got the exporter program, you're going to put it in a usable form. To do that with a PC, create a tarball from the exporter using a program like 7zip; if you're using UNIX, enter something like:
 
