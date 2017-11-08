@@ -20,7 +20,6 @@ This module is licensed under an international Creative Commons Attribution 4.0 
 ## Access:
 This exporter can be downloaded directly from this repository and used on FAIMS **v2.5** server 
 1. Clone the repository
-1. Set the fetch url to the https url for the repository in .git/config
 1. Create a tarball (tar.gz) of the repository directory
 1. Upload the tarball to the server through the plugins interface (for details, see below)
 
@@ -46,7 +45,7 @@ To get the data you have collected with the FAIMS Mobile app in a viewable, usab
 
 * Create a tarball from the exporter using a program like 7zip; if you're using UNIX, enter something like `tar -czf shapefileExport.tar.gz shapefileExport` 
 
-* Now, if you navigate on the server to your module, you'll see a tab at the top labeled 'Plugin Management'. Click that and you'll be brought to a page with the handy feature, 'Upload Exporter'. Choose the tarball you've just created and hit 'upload'. You now have an exporter permanently stored to your FAIMS server and may make use of it whenever you'd like.
+* Now, if you navigate on the server to your module, you'll see a tab at the top labeled 'Plugin Management'. Click that and you'll be brought to a page with the handy feature, 'Upload Exporter'. Choose the tarball you've just created and hit 'Upload'. You now have an exporter permanently stored to your FAIMS server and may make use of it whenever you'd like.
 
 * From now on, whenever you'd like to use your uploaded exporter, navigate to your module from the main page on the server and click 'Export module'. Select from the dropdown menu the exporter you'd like to use, review and select from any additional options, and click 'Export'.
 
