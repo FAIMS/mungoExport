@@ -24,8 +24,8 @@ This exporter can be downloaded directly from this repository and used on FAIMS 
 1. Upload the tarball to the server through the plugins interface (for details, see below)
 
 ## This exporter contains the following features:
-* Simplified attributes, without Annotation and Certainty values
-* Output Data format: CSV, shapefile, sqlite database, photos with attached metadata 
+* Simplified and custom ordered attributes, without Annotation and Certainty values
+* Output Data format: Custom CSV, shapefile, sqlite database, photos with attached metadata 
 
 ## Exporter Use Recommendations:
 * Immediate field use with [Lake-Mungo Module](https://github.com/FAIMS/Lake-Mungo)
