@@ -23,15 +23,15 @@ This exporter can be downloaded directly from this repository and used on FAIMS 
 * Set the fetch url to the https url for the repository in .git/config
 * create a tarball (tar.gz) of the repository directory
 * Upload the tarball to the server through the plugins interface.
-[Implementation instructions for developers] (https://faimsproject.atlassian.net/wiki/display/FAIMS/FAIMS+Data%2C+UI+and+Logic+Cook-Book#FAIMSData,UIandLogicCook-Book-CreateSelf-UpdatingExporter). 
+* [Implementation instructions for developers](https://faimsproject.atlassian.net/wiki/display/FAIMS/FAIMS+Data%2C+UI+and+Logic+Cook-Book#FAIMSData,UIandLogicCook-Book-CreateSelf-UpdatingExporter). 
 
 ## This exporter contains the following features:
 * simplified attributes, without Annotation and Certainty values
 * data format: CSV, shapefile, sqlite database, photos with metadata 
 
 ## Exporter Use Recommendations:
-*Immediate field use with [Lake-Mungo Module](https://github.com/FAIMS/Lake-Mungo)
-*Demonstration and inspiration for other similar customisations
+* Immediate field use with [Lake-Mungo Module](https://github.com/FAIMS/Lake-Mungo)
+* Demonstration and inspiration for other similar customisations
 
 ## Contact info:
 For more details about the **Lake Mungo Survey** please, contact n.stern@latrobe.edu.au.
@@ -49,11 +49,11 @@ To get the data in a viewable, usable fashion, you'll need to find and download 
 
 * Once you've got the exporter program, you're going to put it in a usable form. To do that with a PC, create a tarball from the exporter using a program like 7zip; if you're using UNIX, enter something like:
 
-** A command to: tell the tar command to compress, gzip, and save the folder 'shapefileExport' to the file 'shapefileExport.tar.gz' 'tar -czf shapefileExport.tar.gz shapefileExport' 
+  * A command to: tell the tar command to compress, gzip, and save the folder 'shapefileExport' to the file 'shapefileExport.tar.gz' 'tar -czf shapefileExport.tar.gz shapefileExport' 
 
 * Now, if you navigate on the server to your module, you'll see a tab at the top labeled 'Plugin Management'. Click that and you'll be brought to a page with the handy feature, 'Upload Exporter'. Choose the tarball you've just created and hit 'upload'. You now have an exporter permanently stored to your FAIMS server and may make use of it whenever you'd like.
 
-From now on, whenever you'd like to use your uploaded exporter, navigate to your module from the main page on the server and click 'Export module'. Select from the dropdown menu the exporter you'd like to use, review and select from any additional options, and click 'Export'.
+* From now on, whenever you'd like to use your uploaded exporter, navigate to your module from the main page on the server and click 'Export module'. Select from the dropdown menu the exporter you'd like to use, review and select from any additional options, and click 'Export'.
 
 You'll be brought to your module's background jobs page while the server exports your data. After a few moments, you should be able to hit 'refresh' and see a blue hyperlink to 'Export results'. Clicking that will allow you to download your exported data in a compressed file.
 
