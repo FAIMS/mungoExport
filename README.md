@@ -22,12 +22,11 @@ This exporter can be downloaded directly from this repository and used on FAIMS 
 * Clone the repository
 * Set the fetch url to the https url for the repository in .git/config
 * Create a tarball (tar.gz) of the repository directory
-* Upload the tarball to the server through the plugins interface.
-* . 
+* Upload the tarball to the server through the plugins interface 
 
 ## This exporter contains the following features:
-* simplified attributes, without Annotation and Certainty values
-* data format: CSV, shapefile, sqlite database, photos with metadata 
+* Simplified attributes, without Annotation and Certainty values
+* Output Data format: CSV, shapefile, sqlite database, photos with metadata 
 
 ## Exporter Use Recommendations:
 * Immediate field use with [Lake-Mungo Module](https://github.com/FAIMS/Lake-Mungo)
@@ -37,15 +36,17 @@ For more details about the **Lake Mungo Survey** please, contact n.stern@latrobe
 
 If you have any questions about the exporter or the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you within one business day.
 
-## General How-to Info to Exporters [excerpt from FAIMS User to Developer Documentation](https://docs.google.com/document/d/1BQ_AZQQwEm2pxMyQ5wDLjOdEsO2ixmJaCwEyc9jsEOs/edit)
+## General How-to Info to Exporters 
+*[Based on excerpt from FAIMS User to Developer Documentation](https://docs.google.com/document/d/1BQ_AZQQwEm2pxMyQ5wDLjOdEsO2ixmJaCwEyc9jsEOs/edit)*
+
 To get the data in a viewable, usable fashion, you'll need to find and download an exporter. 
 * On a PC, you can simply download the file from GitHub. If you're using your UNIX virtual machine, you can do so by entering at the command prompt (denoted by \$. Don't copy the \$):
 
-* A command to use the program 'git' to make a copy of the remote code onto your computer 'git clone https://github.com/FAIMS/shapefileExport/' ...with the name of whatever exporter you want, in this example shapefileExport, in the final position.
+* A command to use the program 'git' to make a copy of the remote code onto your computer `git clone https://github.com/FAIMS/shapefileExport/` ...with the name of whatever exporter you want, in this example shapefileExport, in the final position.
 
 * Once you've got the exporter program, you're going to put it in a usable form. To do that with a PC, create a tarball from the exporter using a program like 7zip; if you're using UNIX, enter something like:
 
-  * A command to: tell the tar command to compress, gzip, and save the folder 'shapefileExport' to the file 'shapefileExport.tar.gz' 'tar -czf shapefileExport.tar.gz shapefileExport' 
+  * A command to: tell the tar command to compress, gzip, and save the folder 'shapefileExport' to the file 'shapefileExport.tar.gz' `tar -czf shapefileExport.tar.gz shapefileExport` 
 
 * Now, if you navigate on the server to your module, you'll see a tab at the top labeled 'Plugin Management'. Click that and you'll be brought to a page with the handy feature, 'Upload Exporter'. Choose the tarball you've just created and hit 'upload'. You now have an exporter permanently stored to your FAIMS server and may make use of it whenever you'd like.
 
