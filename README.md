@@ -55,7 +55,7 @@ To get the data in a viewable, usable fashion, you'll need to find and download 
 
 * From now on, whenever you'd like to use your uploaded exporter, navigate to your module from the main page on the server and click 'Export module'. Select from the dropdown menu the exporter you'd like to use, review and select from any additional options, and click 'Export'.
 
-You'll be brought to your module's background jobs page while the server exports your data. After a few moments, you should be able to hit 'refresh' and see a blue hyperlink to 'Export results'. Clicking that will allow you to download your exported data in a compressed file.
+* You'll be brought to your module's background jobs page while the server exports your data. After a few moments, you should be able to hit 'refresh' and see a blue hyperlink to 'Export results'. Clicking that will allow you to download your exported data in a compressed file.
 
 **Exporting data doesn't close down the project or prevent you from working any further on it, so feel free to export data whenever it's convenient.**
 
